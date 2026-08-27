@@ -1,0 +1,5 @@
+사용 기술: LLM, RAG, MySQL, SQL Agent, MCP, Tavily, LangGraph
+
+작동 방식: LLM이 사용자 질문을 판단하고, 법률은 RAG, 데이터 조회·관리는 MySQL 기반 SQL Agent/MCP, 일반 정보는 Tavily 검색으로 처리
+
+구조: 사용자 질문 → LangGraph Router → RAG / DB / Search → LLM 최종 답변
