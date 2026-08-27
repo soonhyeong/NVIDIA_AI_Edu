@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹사이트 연결(데이터 연결)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; }
+    label { display:block; margin: 12px 0 4px; font-weight: 600; }
+    input[type="text"], input[type="number"] { width: 100%; padding: 8px; }
+    button { margin-top: 16px; padding: 10px 16px; cursor: pointer; }
+    .tip { color: #666; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Item 세금 계산</h1>
+  <form action="http://127.0.0.1:8081/items_tax/submit" method="post">
+    <label for="name">상품명</label>
+    <input type="text" id="name" name="name" placeholder="예: 사과" required />
+
+    <label for="description">제품설명</label>
+    <input type="text" id="description" name="description" step="0.01" placeholder="예: 맛있다" required />
+
+    <label for="price">가격(원)</label>
+    <input type="number" id="price" name="price" step="0.01" placeholder="예: 1000" required />
+
+    <label for="tax">세금(원) <span class="tip">(선택)</span></label>
+    <input type="number" id="tax" name="tax" step="0.01" placeholder="예: 100" />
+
+    <button type="submit">계산하기</button>
+    <!-- @app.post('/items_tax/submit', response_class=HTMLResponse) -->
+  </form>
+
+  <hr />
+  <p class="tip">
+    ※ 이 폼은 FastAPI의 <code>Form(...)</code>로 값을 전달합니다.  
+    JSON API로 테스트하려면 <code>/docs</code>에서 <code>POST /items_tax/</code>를 사용하세요.
+  </p>
+</body>
+</html>

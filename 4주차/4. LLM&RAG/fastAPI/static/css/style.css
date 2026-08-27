@@ -1,0 +1,22 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+label { 
+  display:block; 
+  margin: 12px 0 4px; 
+  font-weight: 600; 
+}
+
+input { 
+  width: 100%; 
+  padding: 8px; 
+}
+
+button { 
+  margin-top: 16px; 
+  padding: 10px 16px; 
+  cursor: pointer; 
+}

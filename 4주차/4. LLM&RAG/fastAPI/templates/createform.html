@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>상품 입력</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+</head>
+<body>
+  <h1>상품 입력</h1>
+  <form action="{{ url_for('create_item') }}" method="post">
+    <label for="itemid">상품 ID</label>
+    <input id="itemid" name="itemid" type="number" required>
+    <label for="itemname">상품명</label>
+    <input id="itemname" name="itemname" type="text" required>
+    <button type="submit">저장</button>
+  </form>
+  <p><a href="{{ url_for('response_main') }}">처음으로</a></p>
+</body>
+</html>
