@@ -1,0 +1,13 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\Admin\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "editor.formatOnSave": true,
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    }
+}
